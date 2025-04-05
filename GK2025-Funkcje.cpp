@@ -8,42 +8,42 @@
 
 void Funkcja1() {
 
-    //...
+    narzuconaV1();
 
     SDL_UpdateWindowSurface(window);
 }
 
 void Funkcja2() {
 
-    //...
+    narzuconaV2();
 
     SDL_UpdateWindowSurface(window);
 }
 
 void Funkcja3() {
 
-    //...
+    narzuconaV3();
 
     SDL_UpdateWindowSurface(window);
 }
 
 void Funkcja4() {
 
-    //...
+    //paletaNarzucona();
 
     SDL_UpdateWindowSurface(window);
 }
 
 void Funkcja5() {
 
-    //...
+    //paletaDedykowana();
 
     SDL_UpdateWindowSurface(window);
 }
 
 void Funkcja6() {
 
-    //...
+    paletaNarzucona6();
 
     SDL_UpdateWindowSurface(window);
 }
