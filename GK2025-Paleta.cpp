@@ -300,7 +300,7 @@ void paletaNarzucona6(){
 ** Działa poprawnie dla palety 256 barw
 ** i 64 barw.
 */
-void narysujPalete8bit(int px, int py, SDL_Color pal[]){
+void narysujPalete(int px, int py, SDL_Color pal[]){
     int x, y;
     // Dla każdego z 256 kolorów
     for(int k=0; k<256; k++){
@@ -319,20 +319,29 @@ void narysujPalete8bit(int px, int py, SDL_Color pal[]){
     }
 }
 /*
-** Zwraca pozycje danego koloru w
-** palecie 8K. Jak nie ma, to dodaje
-** nowy kolor do palety i podnosi
-** "ileKolorow" licznik.
+** Sprawdza czy dany kolor jest
+** w palecie i dodaje go jeśli
+** trzeba.
 */
 int sprawdzKolor8(SDL_Color kolor){
-    if(ileKolorow > 0){
-        for(int k=0; k<ileKolorow; k++){
-            if(porownajKolory(kolor, paleta8[k])){
+    if(ileKolorow8 > 0){
+        for(int k=0; k<ileKolorow8; k++){
+            if(porownajKolory(kolor, paleta8k[k])){
                 return k;
             }
         }
     }
-    return dodajKolor(kolor);
+    return dodajKolor8(kolor);
+}
+int sprawdzKolor6(SDL_Color kolor){
+    if(ileKolorow6 > 0){
+        for(int k=0; k<ileKolorow6; k++){
+            if(porownajKolory(kolor, paleta6[k])){
+                return k;
+            }
+        }
+    }
+    return dodajKolor6(kolor);
 }
 /*
 ** Porównuje .r, .g, .b, standardowych kolorów (24)
@@ -412,7 +421,7 @@ void paletaDedykowana8(){
             indexKoloru = sprawdzKolor8(kolor);
         }
     }
-    cout <<endl << "ile kolorow: " << ileKolorow << endl;
+    cout <<endl << "ile kolorow: " << ileKolorow8 << endl;
     /*
     ** Jeśli ilość kolorow jest mniejsza niż pojemnosc palety
     ** to poinformuj o tym uzytkownika
