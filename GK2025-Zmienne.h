@@ -6,16 +6,23 @@
 
 #define szerokosc 640
 #define wysokosc 400
+#define sqr_size 10
 
-#define tytul "GK2025 - Projekt - Zespol XX"
+#define tytul "GK2025 - Projekt - Zespol 22"
 
 extern SDL_Window* window;
 extern SDL_Surface* screen;
 
 extern SDL_Color paleta8[szerokosc*wysokosc];
-extern int ileKolorow;
+extern int ileKolorow8;
 
 extern SDL_Color paleta8k[256];
 extern SDL_Color paleta8s[256];
+
+extern SDL_Color paleta6[szerokosc*wysokosc];
+extern int ileKolorow6;
+
+extern SDL_Color paleta6k[64];
+extern SDL_Color paleta6s[64]
 
 #endif // GK2025_ZMIENNE_H_INCLUDED

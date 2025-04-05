@@ -1,10 +1,15 @@
-// funkcje do redukcji kolor�w i tworzenia palet
+// funkcje do redukcji kolorów i tworzenia palet
 #include "GK2025-Paleta.h"
 #include "GK2025-Zmienne.h"
 #include "GK2025-Funkcje.h"
 
 
-
+/*
+** Narzucona 1, 2, 3 to są przepisane
+** funkcje z początku pdf'a
+** Mają za zadanie pokazać najprostsze
+** mechanizmy działania
+*/
 void narzuconaV1(){
     SDL_Color kolor;
     int R, G, B;
@@ -30,7 +35,6 @@ void narzuconaV1(){
         }
     }
 }
-
 void narzuconaV2(){
     SDL_Color kolor;
     int R, G, B;
@@ -56,8 +60,6 @@ void narzuconaV2(){
         }
     }
 }
-
-
 void narzuconaV3(){
     SDL_Color kolor;
     int R, G, B;
@@ -83,8 +85,12 @@ void narzuconaV3(){
         }
     }
 }
-
-
+/*
+** Kolory 24 bitowe są skanami ekranu,
+** (R8G8B8)
+** Kolory 8 i 6 bitowe są danymi wyjściowymi
+** (R2G2B2)/(Grey6)
+*/
 Uint8 z24Kdo8K(SDL_Color kolor){
     Uint8 kolor8bit;
     int R, G, B;
@@ -103,7 +109,6 @@ Uint8 z24Kdo8K(SDL_Color kolor){
     return kolor8bit;
 
 }
-
 SDL_Color z8Kdo24K(Uint8 kolor8bit){
 
     SDL_Color kolor;
@@ -125,6 +130,12 @@ SDL_Color z8Kdo24K(Uint8 kolor8bit){
     return kolor;
 
 }
+
+/*
+** Poniżej to co się możesz spodziewać
+** z 6bit koloru do standardu.
+** z 6 bit szarego do standardu.
+*/
 SDL_Color z6Kdo24K(Uint8 kolor6bit){
     SDL_Color kolor;
     int R, G, B;
@@ -145,8 +156,7 @@ SDL_Color z6Kdo24K(Uint8 kolor6bit){
     return kolor;
 
 }
-
-SDL_Color z6Kdo24K_Grey(Uint8 kolor6bit){
+SDL_Color z6Sdo24K(Uint8 kolor6bit){
     SDL_Color kolor;
     int Grey;
     int nowyGrey;
@@ -162,8 +172,11 @@ SDL_Color z6Kdo24K_Grey(Uint8 kolor6bit){
     return kolor;
 
 }
-
-
+/*
+** A tutaj:
+** z standardu konwersja na 6 bit kolor
+** z standardu konwersja na 6 bit szary
+*/
 Uint8 z24Kdo6K(SDL_Color kolor){
     Uint8 kolor6bit;
     int R, G, B;
@@ -173,17 +186,26 @@ Uint8 z24Kdo6K(SDL_Color kolor){
     G = kolor.g;
     B = kolor.b;
 
+    /*
+    ** Poniżej dzielimy otrzymane wartości
+    ** przez maksymalny zakres (255)
+    ** i mnożymy potem przez to ile chcemy
+    ** różnych "progów" / "bitów"
+    ** mieć na wyjściu. -1. (bo 0 też jest)
+    */
     nowyR = round(R*3.0/255.0);
     nowyG = round(G*3.0/255.0);
     nowyB = round(B*3.0/255.0);
-
+    /*
+    ** przesunięcia bitowe + 00 na końcu bo nikomu nie ufam.
+    ** przez to wyżej (ilość_bitów -1 ) bity nie powinny się pokrywać
+    */
     kolor6bit = (nowyR<<6) | (nowyG<<4) | (nowyB<<2) | 00;
 
     return kolor6bit;
 
 }
-
-Uint8 z24Kdo6K_grey(SDL_Color kolor){
+Uint8 z24Kdo6S(SDL_Color kolor){
     Uint8 szary6bit;
     int R, G, B;
     int nowyGrey;
@@ -200,10 +222,22 @@ Uint8 z24Kdo6K_grey(SDL_Color kolor){
 
 }
 
+/*
+** Przepisanie obrazka z pierwszej kwarty
+** do drugiej stosując konwersję
+** z24Kdo8K() <--> z8Kdo24K()
+** Wypełnienie palety każdym możliwym
+** kolorem i narysowanie jej.
+*/
 void paletaNarzucona8(){
     Uint8 kolor8bit, szary8bit;
     SDL_Color kolor, nowyKolor, nowySzary;
-
+    /*
+    ** przepisanie z pierwszej na
+    ** drugą ćwiartkę.
+    ** Stosując konwersję
+    ** z24Kdo8K() <--> z8Kdo24K()
+    */
     for(int y=0; y<wysokosc/2; y++){
         for(int x=0; x<szerokosc/2; x++){
             kolor = getPixel(x, y);
@@ -212,17 +246,34 @@ void paletaNarzucona8(){
             setPixel(x+szerokosc/2, y, nowyKolor.r, nowyKolor.g, nowyKolor.b);
         }
     }
-
+    /*
+    ** Dodanie do palety każdego
+    ** możliwego koloru w kolejności
+    */
     for(int k=0; k<256; k++){
         paleta8k[k] = z8Kdo24K(k);
     }
-    narysujPalete(0, 210, paleta8k);
+    /*
+    ** Narysowanie wskazanej palety
+    */
+    narysujPalete8bit(0, 210, paleta8k);
 }
-
+/*
+** Przepisanie obrazka z pierwszej kwarty
+** do drugiej stosując konwersję
+** z24Kdo6K() <--> z6Kdo24K()
+** Wypełnienie palety każdym możliwym
+** kolorem i narysowanie jej.
+*/
 void paletaNarzucona6(){
     Uint8 kolor6bit, szary6bit;
     SDL_Color kolor, nowyKolor, nowySzary;
-
+    /*
+    ** przepisanie z pierwszej na
+    ** trzecią ćwiartkę
+    ** stosowana konwersja
+    ** z24Kdo6K() <--> z6Kdo24K()
+    */
     for(int y=0; y<wysokosc/2; y++){
         for(int x=0; x<szerokosc/2; x++){
             kolor = getPixel(x, y);
@@ -233,28 +284,47 @@ void paletaNarzucona6(){
             setPixel(x, y + wysokosc /2, nowySzary.r, nowySzary.g, nowySzary.b);
         }
     }
-
-    /*for(int k=0; k<256; k++){
+    /*
+    ** Dodanie do palety każdego
+    ** możliwego koloru w kolejności
+    */
+    for(int k=0; k<64; k++){
         paleta8k[k] = z8Kdo24K(k);
     }
-    narysujPalete(0, 210, paleta8k);*/
+    narysujPalete(0, szerokosc/4, paleta8k);
 }
-
-void narysujPalete(int px, int py, SDL_Color pal8[]){
+/*
+** Dla danego początkowego PX, PY.
+** Narysuj każdy kolejny kolor z wskazanej
+** tablicy kolorów (palety).
+** Działa poprawnie dla palety 256 barw
+** i 64 barw.
+*/
+void narysujPalete8bit(int px, int py, SDL_Color pal[]){
     int x, y;
+    // Dla każdego z 256 kolorów
     for(int k=0; k<256; k++){
+        // wyznacz proporcje palety
         y = k / 32;
         x = k % 32;
 
-        for(int xx=0; xx<10; xx++){
-            for(int yy=0; yy<10; yy++){
-                setPixel(x*10+xx+px, y*10+yy+py, pal8[k].r, pal8[k].g, pal8[k].b);
+        // narysuj kwadrat wielkości sqr_size
+        for(int xx=0; xx<sqr_size; xx++){
+            for(int yy=0; yy<sqr_size; yy++){
+                setPixel(x * sqr_size + xx + px,
+                         y * sqr_size + yy + py,
+                         pal[k].r, pal[k].g, pal[k].b);
             }
         }
     }
 }
-
-int sprawdzKolor(SDL_Color kolor){
+/*
+** Zwraca pozycje danego koloru w
+** palecie 8K. Jak nie ma, to dodaje
+** nowy kolor do palety i podnosi
+** "ileKolorow" licznik.
+*/
+int sprawdzKolor8(SDL_Color kolor){
     if(ileKolorow > 0){
         for(int k=0; k<ileKolorow; k++){
             if(porownajKolory(kolor, paleta8[k])){
@@ -264,7 +334,10 @@ int sprawdzKolor(SDL_Color kolor){
     }
     return dodajKolor(kolor);
 }
-
+/*
+** Porównuje .r, .g, .b, standardowych kolorów (24)
+** Funkcja nie zależy od tego, czy 6 czy 8 bitów.
+*/
 bool porownajKolory(SDL_Color kolor1, SDL_Color kolor2){
     if(kolor1.r != kolor2.r)
         return false;
@@ -275,44 +348,82 @@ bool porownajKolory(SDL_Color kolor1, SDL_Color kolor2){
 
     return true;
 }
-
-int dodajKolor(SDL_Color kolor){
-    int aktualnyKolor = ileKolorow;
+/*
+** Dodaje kolor na następne miejsce w palecie
+** Następnie zwraca wartość indeksu.
+*/
+int dodajKolor8(SDL_Color kolor){
+    int aktualnyKolor = ileKolorow8;
     paleta8[aktualnyKolor] = kolor;
-    if(ileKolorow<256){
+    if(ileKolorow8<256){
         cout<<aktualnyKolor<<": [";
         cout<<(int)kolor.r<<","<<(int)kolor.g<<","<<(int)kolor.b;
         cout<<"]"<<endl;
     }
-    ileKolorow++;
+    ileKolorow8++;
     return aktualnyKolor;
 }
-
-void czyscPalete(){
-    for(int k=0; k<ileKolorow; k++)
-        paleta8[k] = {0, 0, 0};
-    ileKolorow = 0;
+/*
+** Dodaje kolor na następne miejsce w palecie
+** Następnie zwraca wartość indeksu.
+*/
+int dodajKolor6(SDL_Color kolor){
+    int aktualnyKolor = ileKolorow6;
+    paleta6[aktualnyKolor] = kolor;
+    if(ileKolorow6<64){
+        cout<<aktualnyKolor<<": [";
+        cout<<(int)kolor.r<<","<<(int)kolor.g<<","<<(int)kolor.b;
+        cout<<"]"<<endl;
+    }
+    ileKolorow6++;
+    return aktualnyKolor;
 }
-
-/*void paletaDedykowana8(){
-    czyscPalete();
-    int indexKoloru;
+/*
+** Wyczyszczenie palet jako indeksów
+** kolorów i "ileKolorow"
+*/
+void czyscPalete8(){
+    for(int k=0; k<ileKolorow8; k++)
+        paleta8[k] = {0, 0, 0};
+    ileKolorow8 = 0;
+}
+void czyscPalete6(){
+    for(int k=0; k<ileKolorow6; k++)
+        paleta6k[k] = {0, 0, 0};
+    ileKolorow6 = 0;
+}
+/*
+** Informuje użytkownika, czy w pierwszej
+** ćwiartce jest obrazek korzystający nie
+** większej ilości kolorów od tej
+** mieszczącej się w palecie8 (256)
+*/
+void paletaDedykowana8(){
+    czyscPalete8();
+    int indexKoloru;    // dla pierwszego => 0;
     SDL_Color kolor;
+    /*
+    ** Dla każdego piksela w pierwszej ćwiartce
+    ** Zmierz Pixel. Sprawdź dany kolor w palecie8.
+    */
     for(int y=0; y<wysokosc/2; y++){
         for(int x=0; x<szerokosc/2; x++){
             kolor = getPixel(x, y);
-            indexKoloru = sprawdzKolor(kolor);
+            indexKoloru = sprawdzKolor8(kolor);
         }
     }
     cout <<endl << "ile kolorow: " << ileKolorow << endl;
-
+    /*
+    ** Jeśli ilość kolorow jest mniejsza niż pojemnosc palety
+    ** to poinformuj o tym uzytkownika
+    */
     if(ileKolorow <= 256){
         cout << "Paleta spelnia ograniczenia 8-bit / piksel" << endl;
         narysujPalete(0, 210, paleta8);
     }else{
         cout << "Paleta przekracza ograniczenia 8-bit / piksel" << endl;
     }
-}*/
+}
 
 
 
