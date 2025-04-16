@@ -12,12 +12,7 @@
 #include <math.h>
 #include <SDL2/SDL.h>
 using namespace std;
-/*
-** Base code that implements base of code.
-** Funcs used are in Funkcje.cpp
-** Implements are above
-** Below is nothing
-*/
+
 int main(int argc, char* argv[]) {
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
 		printf("SDL_Init Error: %s\n", SDL_GetError());

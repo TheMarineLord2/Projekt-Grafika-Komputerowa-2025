@@ -2968,15 +2968,19 @@
 	<fstream>
 	<SDL2/SDL.h>
 
-1743835321 source:c:\users\rokii\desktop\gk2025-projekt\gk2025-mediancut.cpp
-	"GK2025-MedianCut.h"
-	"GK2025-Zmienne.h"
+1743681590 source:c:\users\thinkpad\desktop\gk2025-projekt\gk2025-funkcje.cpp
 	"GK2025-Funkcje.h"
+	"GK2025-Zmienne.h"
+	"GK2025-Paleta.h"
+	"GK2025-MedianCut.h"
+	"GK2025-Pliki.h"
 
-1743835321 c:\users\rokii\desktop\gk2025-projekt\gk2025-mediancut.h
+1743681584 c:\users\thinkpad\desktop\gk2025-projekt\gk2025-funkcje.h
+	<stdio.h>
+	<math.h>
 	<SDL2/SDL.h>
 
-1743835322 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl.h
 	"SDL_main.h"
 	"SDL_stdinc.h"
 	"SDL_assert.h"
@@ -3014,12 +3018,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_main.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_main.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_stdinc.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_stdinc.h
 	"SDL_config.h"
 	<sys/types.h>
 	<stdio.h>
@@ -3051,29 +3055,29 @@
 	<stdio.h>
 	"close_code.h"
 
-1743835322 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_config.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_config.h
 	"SDL_platform.h"
 	<winsdkver.h>
 	<sdkddkver.h>
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_platform.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_platform.h
 	<AvailabilityMacros.h>
 	<TargetConditionals.h>
 	<winapifamily.h>
 	"begin_code.h"
 	"close_code.h"
 
-1743835322 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\begin_code.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\begin_code.h
 
-1743835322 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\close_code.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\close_code.h
 
-1743835322 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_assert.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_assert.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	<signal.h>
 	"close_code.h"
 
-1743835322 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_atomic.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_atomic.h
 	"SDL_stdinc.h"
 	"SDL_platform.h"
 	"begin_code.h"
@@ -3081,7 +3085,7 @@
 	<mbarrier.h>
 	"close_code.h"
 
-1743835322 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_audio.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_audio.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_endian.h"
@@ -3091,12 +3095,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1743835322 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_error.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_error.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835322 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_endian.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_endian.h
 	"SDL_stdinc.h"
 	<intrin.h>
 	<endian.h>
@@ -3105,13 +3109,13 @@
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_mutex.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_mutex.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835324 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_thread.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_thread.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_atomic.h"
@@ -3122,18 +3126,18 @@
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_rwops.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_rwops.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835322 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_clipboard.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_clipboard.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835322 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_cpuinfo.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_cpuinfo.h
 	"SDL_stdinc.h"
 	<intrin.h>
 	<intrin.h>
@@ -3155,7 +3159,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1743835322 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_events.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_events.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -3169,7 +3173,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1743835324 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_video.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_video.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -3177,13 +3181,13 @@
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_pixels.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_pixels.h
 	"SDL_stdinc.h"
 	"SDL_endian.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_rect.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_rect.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_pixels.h"
@@ -3191,7 +3195,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_surface.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_surface.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -3200,11 +3204,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1743835322 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_blendmode.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_blendmode.h
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_keyboard.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_keyboard.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_keycode.h"
@@ -3212,21 +3216,21 @@
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_keycode.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_keycode.h
 	"SDL_stdinc.h"
 	"SDL_scancode.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_scancode.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_scancode.h
 	"SDL_stdinc.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_mouse.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_mouse.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_joystick.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_joystick.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_guid.h"
@@ -3234,13 +3238,13 @@
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_guid.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_guid.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_gamecontroller.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_gamecontroller.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_rwops.h"
@@ -3249,17 +3253,17 @@
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_sensor.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_sensor.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_quit.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_quit.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_gesture.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_gesture.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -3267,70 +3271,70 @@
 	"begin_code.h"
 	"close_code.h"
 
-1743835324 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_touch.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_touch.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_filesystem.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_filesystem.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_haptic.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_haptic.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_joystick.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_hidapi.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_hidapi.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_hints.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_hints.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_loadso.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_loadso.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_log.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_log.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_messagebox.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_messagebox.h
 	"SDL_stdinc.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_metal.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_metal.h
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_power.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_power.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_render.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_render.h
 	"SDL_stdinc.h"
 	"SDL_rect.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_shape.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_shape.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -3339,7 +3343,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_system.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_system.h
 	"SDL_stdinc.h"
 	"SDL_keyboard.h"
 	"SDL_render.h"
@@ -3347,57 +3351,65 @@
 	"begin_code.h"
 	"close_code.h"
 
-1743835324 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_timer.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_timer.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835324 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_version.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_version.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_locale.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_locale.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835323 c:\users\rokii\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_misc.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt\sdl2\include\sdl2\sdl_misc.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743835321 c:\users\rokii\desktop\gk2025-projekt\gk2025-zmienne.h
+1743681482 c:\users\thinkpad\desktop\gk2025-projekt\gk2025-zmienne.h
 	<SDL2/SDL.h>
 
-1743835321 c:\users\rokii\desktop\gk2025-projekt\gk2025-funkcje.h
-	<stdio.h>
-	<math.h>
-	<SDL2/SDL.h>
-
-1743835321 source:c:\users\rokii\desktop\gk2025-projekt\gk2025-pliki.cpp
-	"GK2025-Funkcje.h"
-	"GK2025-Zmienne.h"
-	"GK2025-Paleta.h"
-	"GK2025-MedianCut.h"
-	"GK2025-Pliki.h"
-
-1743840441 c:\users\rokii\desktop\gk2025-projekt\gk2025-paleta.h
+1743681546 c:\users\thinkpad\desktop\gk2025-projekt\gk2025-paleta.h
 	<stdio.h>
 	<stdlib.h>
 	<SDL2/SDL.h>
 	<iostream>
 	<cmath>
 
-1743835321 c:\users\rokii\desktop\gk2025-projekt\gk2025-pliki.h
+1743681570 c:\users\thinkpad\desktop\gk2025-projekt\gk2025-mediancut.h
+	<SDL2/SDL.h>
+
+1743681534 c:\users\thinkpad\desktop\gk2025-projekt\gk2025-pliki.h
 	<stdio.h>
 	<math.h>
 	<fstream>
 	<SDL2/SDL.h>
 
-1743835321 source:c:\users\rokii\desktop\gk2025-projekt\gk2025-projekt.cpp
+1743681578 source:c:\users\thinkpad\desktop\gk2025-projekt\gk2025-mediancut.cpp
+	"GK2025-MedianCut.h"
+	"GK2025-Zmienne.h"
+	"GK2025-Funkcje.h"
+
+1743681564 source:c:\users\thinkpad\desktop\gk2025-projekt\gk2025-paleta.cpp
+	"GK2025-Paleta.h"
+	"GK2025-Zmienne.h"
+	"GK2025-Funkcje.h"
+
+1743681542 source:c:\users\thinkpad\desktop\gk2025-projekt\gk2025-pliki.cpp
+	"GK2025-Funkcje.h"
+	"GK2025-Zmienne.h"
+	"GK2025-Paleta.h"
+	"GK2025-MedianCut.h"
+	"GK2025-Pliki.h"
+
+1743681508 source:c:\users\thinkpad\desktop\gk2025-projekt\gk2025-projekt.cpp
 	"GK2025-Zmienne.h"
 	"GK2025-Funkcje.h"
 	"GK2025-Paleta.h"
@@ -3410,34 +3422,22 @@
 	<math.h>
 	<SDL2/SDL.h>
 
-1743835321 source:c:\users\rokii\desktop\gk2025-projekt\gk2025-zmienne.cpp
+1743681490 source:c:\users\thinkpad\desktop\gk2025-projekt\gk2025-zmienne.cpp
 	"GK2025-Zmienne.h"
 
-1743838466 source:c:\users\rokii\desktop\gk2025-projekt\gk2025-funkcje.cpp
+1743874252 source:c:\users\thinkpad\desktop\gk2025-projekt - copy\gk2025-funkcje.cpp
 	"GK2025-Funkcje.h"
 	"GK2025-Zmienne.h"
 	"GK2025-Paleta.h"
 	"GK2025-MedianCut.h"
 	"GK2025-Pliki.h"
 
-1743837461 source:c:\users\rokii\desktop\gk2025-projekt\gk2025-paleta.cpp
-	"GK2025-Paleta.h"
-	"GK2025-Zmienne.h"
-	"GK2025-Funkcje.h"
-
-1743843888 source:c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\gk2025-funkcje.cpp
-	"GK2025-Funkcje.h"
-	"GK2025-Zmienne.h"
-	"GK2025-Paleta.h"
-	"GK2025-MedianCut.h"
-	"GK2025-Pliki.h"
-
-1743841539 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\gk2025-funkcje.h
+1743681584 c:\users\thinkpad\desktop\gk2025-projekt - copy\gk2025-funkcje.h
 	<stdio.h>
 	<math.h>
 	<SDL2/SDL.h>
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl.h
 	"SDL_main.h"
 	"SDL_stdinc.h"
 	"SDL_assert.h"
@@ -3475,12 +3475,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_main.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_main.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_stdinc.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_stdinc.h
 	"SDL_config.h"
 	<sys/types.h>
 	<stdio.h>
@@ -3512,29 +3512,29 @@
 	<stdio.h>
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_config.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_config.h
 	"SDL_platform.h"
 	<winsdkver.h>
 	<sdkddkver.h>
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_platform.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_platform.h
 	<AvailabilityMacros.h>
 	<TargetConditionals.h>
 	<winapifamily.h>
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\begin_code.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\begin_code.h
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\close_code.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\close_code.h
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_assert.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_assert.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	<signal.h>
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_atomic.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_atomic.h
 	"SDL_stdinc.h"
 	"SDL_platform.h"
 	"begin_code.h"
@@ -3542,7 +3542,7 @@
 	<mbarrier.h>
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_audio.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_audio.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_endian.h"
@@ -3552,12 +3552,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_error.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_error.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_endian.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_endian.h
 	"SDL_stdinc.h"
 	<intrin.h>
 	<endian.h>
@@ -3566,13 +3566,13 @@
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_mutex.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_mutex.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_thread.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_thread.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_atomic.h"
@@ -3583,18 +3583,18 @@
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_rwops.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_rwops.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_clipboard.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_clipboard.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_cpuinfo.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_cpuinfo.h
 	"SDL_stdinc.h"
 	<intrin.h>
 	<intrin.h>
@@ -3616,7 +3616,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_events.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_events.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -3630,7 +3630,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_video.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_video.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -3638,13 +3638,13 @@
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_pixels.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_pixels.h
 	"SDL_stdinc.h"
 	"SDL_endian.h"
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_rect.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_rect.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_pixels.h"
@@ -3652,7 +3652,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_surface.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_surface.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -3661,11 +3661,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_blendmode.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_blendmode.h
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_keyboard.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_keyboard.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_keycode.h"
@@ -3673,21 +3673,21 @@
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_keycode.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_keycode.h
 	"SDL_stdinc.h"
 	"SDL_scancode.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_scancode.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_scancode.h
 	"SDL_stdinc.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_mouse.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_mouse.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_joystick.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_joystick.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_guid.h"
@@ -3695,13 +3695,13 @@
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_guid.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_guid.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_gamecontroller.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_gamecontroller.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_rwops.h"
@@ -3710,17 +3710,17 @@
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_sensor.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_sensor.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_quit.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_quit.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_gesture.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_gesture.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -3728,70 +3728,70 @@
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_touch.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_touch.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_filesystem.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_filesystem.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_haptic.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_haptic.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_joystick.h"
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_hidapi.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_hidapi.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_hints.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_hints.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_loadso.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_loadso.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_log.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_log.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_messagebox.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_messagebox.h
 	"SDL_stdinc.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_metal.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_metal.h
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_power.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_power.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_render.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_render.h
 	"SDL_stdinc.h"
 	"SDL_rect.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_shape.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_shape.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -3800,7 +3800,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_system.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_system.h
 	"SDL_stdinc.h"
 	"SDL_keyboard.h"
 	"SDL_render.h"
@@ -3808,60 +3808,65 @@
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_timer.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_timer.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_version.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_version.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_locale.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_locale.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1693560518 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\sdl2\include\sdl2\sdl_misc.h
+1693560518 c:\users\thinkpad\desktop\gk2025-projekt - copy\sdl2\include\sdl2\sdl_misc.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1743681482 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\gk2025-zmienne.h
+1744048638 c:\users\thinkpad\desktop\gk2025-projekt - copy\gk2025-zmienne.h
 	<SDL2/SDL.h>
 
-1743844797 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\gk2025-paleta.h
+1744049282 c:\users\thinkpad\desktop\gk2025-projekt - copy\gk2025-paleta.h
 	<stdio.h>
 	<stdlib.h>
 	<SDL2/SDL.h>
 	<iostream>
 	<cmath>
 
-1743681570 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\gk2025-mediancut.h
+1743681570 c:\users\thinkpad\desktop\gk2025-projekt - copy\gk2025-mediancut.h
 	<SDL2/SDL.h>
 
-1743681534 c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\gk2025-pliki.h
+1743681534 c:\users\thinkpad\desktop\gk2025-projekt - copy\gk2025-pliki.h
 	<stdio.h>
 	<math.h>
 	<fstream>
 	<SDL2/SDL.h>
 
-1743681578 source:c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\gk2025-mediancut.cpp
+1743681578 source:c:\users\thinkpad\desktop\gk2025-projekt - copy\gk2025-mediancut.cpp
 	"GK2025-MedianCut.h"
 	"GK2025-Zmienne.h"
 	"GK2025-Funkcje.h"
 
-1743681542 source:c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\gk2025-pliki.cpp
+1744049486 source:c:\users\thinkpad\desktop\gk2025-projekt - copy\gk2025-paleta.cpp
+	"GK2025-Paleta.h"
+	"GK2025-Zmienne.h"
+	"GK2025-Funkcje.h"
+
+1743681542 source:c:\users\thinkpad\desktop\gk2025-projekt - copy\gk2025-pliki.cpp
 	"GK2025-Funkcje.h"
 	"GK2025-Zmienne.h"
 	"GK2025-Paleta.h"
 	"GK2025-MedianCut.h"
 	"GK2025-Pliki.h"
 
-1743681508 source:c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\gk2025-projekt.cpp
+1743681508 source:c:\users\thinkpad\desktop\gk2025-projekt - copy\gk2025-projekt.cpp
 	"GK2025-Zmienne.h"
 	"GK2025-Funkcje.h"
 	"GK2025-Paleta.h"
@@ -3874,11 +3879,6 @@
 	<math.h>
 	<SDL2/SDL.h>
 
-1743844654 source:c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\gk2025-zmienne.cpp
+1744046396 source:c:\users\thinkpad\desktop\gk2025-projekt - copy\gk2025-zmienne.cpp
 	"GK2025-Zmienne.h"
-
-1743844706 source:c:\users\jbull\onedrive\pulpit\grafika komputerowa\projekt\gk2025-projekt\projekt-grafika-komputerowa\gk2025-paleta.cpp
-	"GK2025-Paleta.h"
-	"GK2025-Zmienne.h"
-	"GK2025-Funkcje.h"
 

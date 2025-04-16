@@ -260,4 +260,3 @@ void czyscEkran(Uint8 R, Uint8 G, Uint8 B)
     SDL_FillRect(screen, 0, SDL_MapRGB(screen->format, R, G, B));
     SDL_UpdateWindowSurface(window);
 }
-

@@ -3,7 +3,6 @@
 #include "GK2025-Zmienne.h"
 #include "GK2025-Funkcje.h"
 
-
 /*
 ** Narzucona 1, 2, 3 to są przepisane
 ** funkcje z początku pdf'a
@@ -280,7 +279,7 @@ void paletaNarzucona6(){
             kolor6bit = z24Kdo6K(kolor);
             nowyKolor = z6Kdo24K(kolor6bit);
             setPixel(x + szerokosc /2, y, nowyKolor.r, nowyKolor.g, nowyKolor.b);
-            nowySzary = z6Kdo24K_Grey(kolor6bit);
+            nowySzary = z6Sdo24K(kolor6bit);
             setPixel(x, y + wysokosc /2, nowySzary.r, nowySzary.g, nowySzary.b);
         }
     }
@@ -289,9 +288,9 @@ void paletaNarzucona6(){
     ** możliwego koloru w kolejności
     */
     for(int k=0; k<64; k++){
-        paleta8k[k] = z8Kdo24K(k);
+        paleta6k[k] = z6Kdo24K(k);
     }
-    narysujPalete(0, szerokosc/4, paleta8k);
+    narysujPalete6bit(0, szerokosc/4, paleta6k);
 }
 /*
 ** Dla danego początkowego PX, PY.
@@ -300,13 +299,35 @@ void paletaNarzucona6(){
 ** Działa poprawnie dla palety 256 barw
 ** i 64 barw.
 */
-void narysujPalete(int px, int py, SDL_Color pal[]){
+
+void narysujPalete8bit(int px, int py, SDL_Color pal[]){
     int x, y;
     // Dla każdego z 256 kolorów
     for(int k=0; k<256; k++){
         // wyznacz proporcje palety
         y = k / 32;
         x = k % 32;
+
+
+        // narysuj kwadrat wielkości sqr_size
+        for(int xx=0; xx<sqr_size; xx++){
+            for(int yy=0; yy<sqr_size; yy++){
+                setPixel(x * sqr_size + xx + px,
+                         y * sqr_size + yy + py,
+                         pal[k].r, pal[k].g, pal[k].b);
+            }
+        }
+    }
+}
+
+void narysujPalete6bit(int px, int py, SDL_Color pal[]){
+    int x, y;
+    // Dla każdego z 256 kolorów
+    for(int k=0; k<64; k++){
+        // wyznacz proporcje palety
+        y = k / 8;
+        x = k % 8;
+
 
         // narysuj kwadrat wielkości sqr_size
         for(int xx=0; xx<sqr_size; xx++){
@@ -319,29 +340,20 @@ void narysujPalete(int px, int py, SDL_Color pal[]){
     }
 }
 /*
-** Sprawdza czy dany kolor jest
-** w palecie i dodaje go jeśli
-** trzeba.
+** Zwraca pozycje danego koloru w
+** palecie 8K. Jak nie ma, to dodaje
+** nowy kolor do palety i podnosi
+** "ileKolorow" licznik.
 */
 int sprawdzKolor8(SDL_Color kolor){
     if(ileKolorow8 > 0){
         for(int k=0; k<ileKolorow8; k++){
-            if(porownajKolory(kolor, paleta8k[k])){
+            if(porownajKolory(kolor, paleta8[k])){
                 return k;
             }
         }
     }
     return dodajKolor8(kolor);
-}
-int sprawdzKolor6(SDL_Color kolor){
-    if(ileKolorow6 > 0){
-        for(int k=0; k<ileKolorow6; k++){
-            if(porownajKolory(kolor, paleta6[k])){
-                return k;
-            }
-        }
-    }
-    return dodajKolor6(kolor);
 }
 /*
 ** Porównuje .r, .g, .b, standardowych kolorów (24)
@@ -398,7 +410,7 @@ void czyscPalete8(){
 }
 void czyscPalete6(){
     for(int k=0; k<ileKolorow6; k++)
-        paleta6k[k] = {0, 0, 0};
+        paleta6[k] = {0, 0, 0};
     ileKolorow6 = 0;
 }
 /*
@@ -426,14 +438,13 @@ void paletaDedykowana8(){
     ** Jeśli ilość kolorow jest mniejsza niż pojemnosc palety
     ** to poinformuj o tym uzytkownika
     */
-    if(ileKolorow <= 256){
+    if(ileKolorow8 <= 256){
         cout << "Paleta spelnia ograniczenia 8-bit / piksel" << endl;
-        narysujPalete(0, 210, paleta8);
+        narysujPalete8bit(0, 210, paleta8);
     }else{
         cout << "Paleta przekracza ograniczenia 8-bit / piksel" << endl;
     }
 }
-
 
 
 
