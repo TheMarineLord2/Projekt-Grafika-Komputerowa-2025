@@ -25,4 +25,8 @@ extern int ileKolorow6;
 extern SDL_Color paleta6k[64];
 extern SDL_Color paleta6s[64]
 
+extern int ileKubelkow;
+extern Uint8 obrazekS[320*200];
+extern SDL_Color obrazekK[320*200];
+
 #endif // GK2025_ZMIENNE_H_INCLUDED
