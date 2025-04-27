@@ -4,4 +4,7 @@
 
 #include <SDL2/SDL.h>
 
+void paletaMedianCutBW();
+void MedianCutBW(int start, int koniec, int iteracja);
+
 #endif // GK2025_MEDIANCUT_H_INCLUDED
