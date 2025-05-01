@@ -49,15 +49,17 @@
 		<ExtraCommands>
 			<Add after="XCOPY .\SDL2\bin\*.dll $(TARGET_OUTPUT_DIR) /D /Y" />
 		</ExtraCommands>
-		<Unit filename="GK2025-Projekt.cpp" />
+		<Unit filename="GK2025-Dithering.cpp" />
+		<Unit filename="GK2025-Dithering.h" />
 		<Unit filename="GK2025-Funkcje.cpp" />
 		<Unit filename="GK2025-Funkcje.h" />
+		<Unit filename="GK2025-MedianCut.cpp" />
+		<Unit filename="GK2025-MedianCut.h" />
 		<Unit filename="GK2025-Paleta.cpp" />
 		<Unit filename="GK2025-Paleta.h" />
 		<Unit filename="GK2025-Pliki.cpp" />
 		<Unit filename="GK2025-Pliki.h" />
-		<Unit filename="GK2025-MedianCut.cpp" />
-		<Unit filename="GK2025-MedianCut.h" />
+		<Unit filename="GK2025-Projekt.cpp" />
 		<Unit filename="GK2025-Zmienne.cpp" />
 		<Unit filename="GK2025-Zmienne.h" />
 		<Extensions>

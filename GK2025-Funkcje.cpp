@@ -2,6 +2,7 @@
 #include "GK2025-Funkcje.h"
 #include "GK2025-Zmienne.h"
 #include "GK2025-Paleta.h"
+#include "GK2025-Dithering.h"
 #include "GK2025-MedianCut.h"
 #include "GK2025-Pliki.h"
 
@@ -29,21 +30,35 @@ void Funkcja3() {
 
 void Funkcja4() {
 
-    //paletaNarzucona();
+    paletaNarzucona8();
 
     SDL_UpdateWindowSurface(window);
 }
 
 void Funkcja5() {
 
-    //paletaDedykowana();
+    paletaNarzucona6();
 
     SDL_UpdateWindowSurface(window);
 }
 
 void Funkcja6() {
+    wyzerujTabliceBledow();
 
-    paletaNarzucona6();
+    for(int y=0; y<wysokosc/2; y++){
+        for(int x=0; x<szerokosc/2; x++){
+            // probkowanie pixelow
+            SDL_Color kolor = getPixel(x, y);
+            kolor = uzyskajKolorPoprawionyOBlod(kolor, x,y);
+            // zamiana probki na 6bit kolor
+            Uint8 kolor6bit = z24Kdo6K(kolor);
+            // odczytanie z 6k na malowalny pixel
+            SDL_Color nowyKolor = z6Kdo24K(kolor6bit);
+            nowyKolor.r = nowyKolor.r;
+            obliczIPropagujBlad(kolor, nowyKolor, x, y);
+            setPixel(x + szerokosc /2 , y, nowyKolor.r, nowyKolor.g, nowyKolor.b);
+        }
+    }
 
     SDL_UpdateWindowSurface(window);
 }

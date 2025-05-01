@@ -4,3 +4,4 @@
 #include "GK2025-Paleta.h"
 #include "GK2025-MedianCut.h"
 #include "GK2025-Pliki.h"
+#include "GK2025-Dithering.h"

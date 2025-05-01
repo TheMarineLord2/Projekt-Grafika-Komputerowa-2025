@@ -140,9 +140,9 @@ SDL_Color z6Kdo24K(Uint8 kolor6bit){
     int R, G, B;
     int nowyR, nowyG, nowyB;
 
-    nowyR = (kolor6bit&(0b11000000))>>6;
-    nowyG = (kolor6bit&(0b00110000))>>4;
-    nowyB = (kolor6bit&(0b00001100))>>2;
+    nowyR = (kolor6bit&(0b00110000))>>4;
+    nowyG = (kolor6bit&(0b00001100))>>2;
+    nowyB = (kolor6bit&(0b00000011));
 
     R = nowyR*255.0/3.0;
     G = nowyG*255.0/3.0;
@@ -160,7 +160,7 @@ SDL_Color z6Sdo24K(Uint8 kolor6bit){
     int Grey;
     int nowyGrey;
 
-    nowyGrey = (kolor6bit&(0b11111100))>>2;
+    nowyGrey = (kolor6bit&(0b00111111));
 
     Grey = nowyGrey*255.0/64.0;
 
@@ -199,7 +199,7 @@ Uint8 z24Kdo6K(SDL_Color kolor){
     ** przesunięcia bitowe + 00 na końcu bo nikomu nie ufam.
     ** przez to wyżej (ilość_bitów -1 ) bity nie powinny się pokrywać
     */
-    kolor6bit = (nowyR<<6) | (nowyG<<4) | (nowyB<<2) | 00;
+    kolor6bit = 00 | (nowyR<<4) | (nowyG<<2) | (nowyB);
 
     return kolor6bit;
 
@@ -221,22 +221,11 @@ Uint8 z24Kdo6S(SDL_Color kolor){
 
 }
 
-/*
-** Przepisanie obrazka z pierwszej kwarty
-** do drugiej stosując konwersję
-** z24Kdo8K() <--> z8Kdo24K()
-** Wypełnienie palety każdym możliwym
-** kolorem i narysowanie jej.
-*/
+// narysowanie narzuconych palet barw
 void paletaNarzucona8(){
     Uint8 kolor8bit, szary8bit;
     SDL_Color kolor, nowyKolor, nowySzary;
-    /*
-    ** przepisanie z pierwszej na
-    ** drugą ćwiartkę.
-    ** Stosując konwersję
-    ** z24Kdo8K() <--> z8Kdo24K()
-    */
+    // narysowanie za pomocą palety czegoś w celach demonstracyjnych
     for(int y=0; y<wysokosc/2; y++){
         for(int x=0; x<szerokosc/2; x++){
             kolor = getPixel(x, y);
@@ -257,48 +246,33 @@ void paletaNarzucona8(){
     */
     narysujPalete8bit(0, 210, paleta8k);
 }
-/*
-** Przepisanie obrazka z pierwszej kwarty
-** do drugiej stosując konwersję
-** z24Kdo6K() <--> z6Kdo24K()
-** Wypełnienie palety każdym możliwym
-** kolorem i narysowanie jej.
-*/
 void paletaNarzucona6(){
     Uint8 kolor6bit, szary6bit;
     SDL_Color kolor, nowyKolor, nowySzary;
-    /*
-    ** przepisanie z pierwszej na
-    ** trzecią ćwiartkę
-    ** stosowana konwersja
-    ** z24Kdo6K() <--> z6Kdo24K()
-    */
+
+    // narysowanie czegoś w celach demonstracyjnych
     for(int y=0; y<wysokosc/2; y++){
         for(int x=0; x<szerokosc/2; x++){
+            // probkowanie pixelow
             kolor = getPixel(x, y);
+            // zamiana probki na 6bit kolor
             kolor6bit = z24Kdo6K(kolor);
+            // odczytanie z 6k na malowalny pixel
             nowyKolor = z6Kdo24K(kolor6bit);
-            setPixel(x + szerokosc /2, y, nowyKolor.r, nowyKolor.g, nowyKolor.b);
+            setPixel(x + szerokosc /2 , y, nowyKolor.r, nowyKolor.g, nowyKolor.b);
             nowySzary = z6Sdo24K(kolor6bit);
-            setPixel(x, y + wysokosc /2, nowySzary.r, nowySzary.g, nowySzary.b);
+            setPixel(x + szerokosc /2 , y + wysokosc /2, nowySzary.r, nowySzary.g, nowySzary.b);
         }
     }
-    /*
-    ** Dodanie do palety każdego
-    ** możliwego koloru w kolejności
-    */
+
+    // przeiterowanie po każdej dopuszczalnej przez nas wartości bitowej
     for(int k=0; k<64; k++){
         paleta6k[k] = z6Kdo24K(k);
+        paleta6s[k] = z6Sdo24K(k);
     }
-    narysujPalete6bit(0, szerokosc/4, paleta6k);
+    narysujPalete6bit(0, wysokosc/2, paleta6k);
+    narysujPalete6bit(szerokosc/2, wysokosc/2, paleta6s);
 }
-/*
-** Dla danego początkowego PX, PY.
-** Narysuj każdy kolejny kolor z wskazanej
-** tablicy kolorów (palety).
-** Działa poprawnie dla palety 256 barw
-** i 64 barw.
-*/
 
 void narysujPalete8bit(int px, int py, SDL_Color pal[]){
     int x, y;
@@ -322,7 +296,7 @@ void narysujPalete8bit(int px, int py, SDL_Color pal[]){
 
 void narysujPalete6bit(int px, int py, SDL_Color pal[]){
     int x, y;
-    // Dla każdego z 256 kolorów
+    // Dla każdego z 64 kolorów
     for(int k=0; k<64; k++){
         // wyznacz proporcje palety
         y = k / 8;
@@ -421,6 +395,7 @@ void czyscPalete6(){
 */
 void paletaDedykowana8(){
     czyscPalete8();
+
     int indexKoloru;    // dla pierwszego => 0;
     SDL_Color kolor;
     /*
