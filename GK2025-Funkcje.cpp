@@ -43,30 +43,7 @@ void Funkcja5() {
 }
 
 void Funkcja6() {
-    wyzerujTabliceBledow();
 
-    // w poniższej petli dla każdego pixela
-    // bierzemy wartość z obrazka (+ błędu)
-    // konwersja koloru na nasz format i na klasyczny z powrotem
-    // konwersja do osobnej zmiennej
-    // obliczanie błędu (+ propagacja)
-    // malowanie
-
-    for(int y=0; y<wysokosc/2; y++){
-        for(int x=0; x<szerokosc/2; x++){
-            // bierzemy kolor
-            SDL_Color orgKolor = getPixel(x, y);
-            orgKolor = uzyskajKolorPoprawionyOBlod(orgKolor, x,y);
-
-            // konwersja
-            Uint8 kolor6bit = z24Kdo6K(orgKolor);
-            SDL_Color nowyKolor = z6Kdo24K(kolor6bit);
-
-            // propagowanie i malowanie
-            obliczIPropagujBlad(orgKolor, nowyKolor, x, y);
-            setPixel(x + szerokosc /2 , y, nowyKolor.r, nowyKolor.g, nowyKolor.b);
-        }
-    }
 
     SDL_UpdateWindowSurface(window);
 }
@@ -80,14 +57,14 @@ void Funkcja7() {
 
 void Funkcja8() {
 
-    //...
+    floydSteinbergMedianCutBW();
 
     SDL_UpdateWindowSurface(window);
 }
 
 void Funkcja9() {
 
-    //...
+    paletaMedianCutBW_6bit();
 
     SDL_UpdateWindowSurface(window);
 }

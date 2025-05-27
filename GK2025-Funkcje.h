@@ -16,6 +16,7 @@ void Funkcja7();
 void Funkcja8();
 void Funkcja9();
 
+SDL_Color getPixel(int x, int y);
 void setPixel(int x, int y, Uint8 R, Uint8 G, Uint8 B);
 SDL_Color getPixel(int x, int y);
 void czyscEkran(Uint8 R, Uint8 G, Uint8 B);
