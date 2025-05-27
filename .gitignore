@@ -35,3 +35,6 @@ README_in_nice_colors.cpp
 *.layout
 *.layout
 *.layout
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/settings.json
