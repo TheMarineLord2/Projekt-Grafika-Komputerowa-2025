@@ -80,7 +80,7 @@ void paletaMedianCutBW_6bit(){
             setPixel(x, y + wysokosc/2, paleta6s[indeks].r, paleta6s[indeks].g, paleta6s[indeks].b);
         }
     }
-    narysujPalete_6bit_64odcienie_szarego(0, 310, paleta6s);
+    narysujPalete_6bit_64odcienie_szarego(0, wysokosc/2, paleta6s);
 
     SDL_UpdateWindowSurface(window);
 

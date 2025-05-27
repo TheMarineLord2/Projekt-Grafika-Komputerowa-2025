@@ -31,13 +31,8 @@ extern SDL_Color paleta6s[64];
 // tablicaBledow ma dwie wartosci, zeby byc przygotowana na przyjmowanie odchylen
 // na plus i na minus od rysowanej wartosci
 // [0] - nastepny kolor intenstywniej [1], nastepny kolor lzej
-extern SDL_Color tablicaBledow[szerokosc/2][wysokosc/2][2];
-// zmienne float do propagowania bledow
-extern double siedem16;
-extern double trzy16;
-extern double piec16;
-extern double jedna16;
-
+extern SDL_Color tablicaBledowK[szerokosc/2][wysokosc/2][2];
+extern Uint8 tablicaBledowS[szerokosc/2][wysokosc/2][2];
 extern int ileKubelkow;
 extern Uint8 obrazekS[320*200];
 extern SDL_Color obrazekK[320*200];
