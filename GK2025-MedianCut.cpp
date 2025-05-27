@@ -6,7 +6,7 @@
 
 using namespace std;
 
-########### MEDIAN CUT -- SZARY ########
+// MedianCut -- SZARY
 
 void paletaMedianCutBW(){
     ileKubelkow = 0;
@@ -219,7 +219,7 @@ void MedianCutBW_6bit(int start, int koniec, int iteracja){
 
 }
 
-########### MEDIAN CUT -- KOLORY ########
+// MedianCut -- KOLORY
 
 
 void MedianCut(int start, int koniec, int iteracja){
@@ -383,7 +383,7 @@ int znajdzSasiada(SDL_Color kolor){
     return indexMinimum;
 }
 
-### MedianCut dla wersji 6-bitowej -> 64 kolory ###
+// MedianCut dla wersji 6-bitowej -> 64 kolory
 void paletaMedianCut_6bit(){
     ileKubelkow = 0;
     ileKolorow8 = 0;
