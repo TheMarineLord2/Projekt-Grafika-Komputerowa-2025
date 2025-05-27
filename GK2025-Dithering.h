@@ -8,5 +8,6 @@ extern void propagujBlad(SDL_Color wartosciBledow[], int x, int y);
 extern void obliczIPropagujBlad(SDL_Color oryginal, SDL_Color malowany, int x, int y);
 extern SDL_Color uzyskajKolorPoprawionyOBlod(SDL_Color oryginalny, int x, int y);
 
-
+extern void floydSteinbergBasic();
+extern void floydSteinbergMedianCutBW();
 #endif

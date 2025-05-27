@@ -421,26 +421,6 @@ void paletaDedykowana8(){
     }
 }
 
-void narysujPalete6bit(int px, int py, SDL_Color pal[]){
-    int x, y;
-    // Dla każdego z 256 kolorów
-    for(int k=0; k<64; k++){
-        // wyznacz proporcje palety
-        y = k / 8;
-        x = k % 8;
-
-
-        // narysuj kwadrat wielkości sqr_size
-        for(int xx=0; xx<sqr_size; xx++){
-            for(int yy=0; yy<sqr_size; yy++){
-                setPixel(x * sqr_size + xx + px,
-                         y * sqr_size + yy + py,
-                         pal[k].r, pal[k].g, pal[k].b);
-            }
-        }
-    }
-}
-
 void czyscPalete(){
     for(int k=0; k<ileKolorow8; k++){
         paleta8[k] = {0, 0, 0};
