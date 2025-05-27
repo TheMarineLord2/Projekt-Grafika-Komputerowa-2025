@@ -431,6 +431,10 @@ void czyscPalete(){
         paleta8k[k] = {0, 0, 0};
 
     }
+    for(int k=0; k<ileKolorow6; k++){
+        paleta6[k] = {0, 0, 0};
+    }
+    ileKolorow6 = 0;
     for(int k=0; k<65; k++){
         paleta6k[k] = {0, 0, 0};
         paleta6s[k] = {0, 0, 0};
