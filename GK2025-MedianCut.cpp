@@ -386,7 +386,7 @@ int znajdzSasiada(SDL_Color kolor){
 // MedianCut dla wersji 6-bitowej -> 64 kolory
 void paletaMedianCut_6bit(){
     ileKubelkow = 0;
-    ileKolorow8 = 0;
+    ileKolorow6 = 0;
     czyscPalete();
     SDL_Color kolor;
     int numer = 0;
