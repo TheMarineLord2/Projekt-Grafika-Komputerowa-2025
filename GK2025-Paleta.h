@@ -25,6 +25,12 @@ void paletaNarzucona();
 
 void czyscPalete8();
 void czyscPalete6();
+void narysujPalete8bit(int px, int py, SDL_Color pal[]);
+void narysujPalete6bit(int px, int py, SDL_Color pal[]);
+int dodajKolor(SDL_Color kolor);
+void czyscPalete();
+void narysujPalete3b(int px, int py, SDL_Color pal3b[]);
+void narysujPalete_6bit_64odcienie_szarego(int px, int py, SDL_Color pal6b[]);
 
 // funkcie przygotowane przez Doktora:
 Uint8 z24Kdo8K(SDL_Color kolor);

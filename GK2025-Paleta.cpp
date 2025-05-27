@@ -421,6 +421,72 @@ void paletaDedykowana8(){
     }
 }
 
+void narysujPalete6bit(int px, int py, SDL_Color pal[]){
+    int x, y;
+    // Dla każdego z 256 kolorów
+    for(int k=0; k<64; k++){
+        // wyznacz proporcje palety
+        y = k / 8;
+        x = k % 8;
+
+
+        // narysuj kwadrat wielkości sqr_size
+        for(int xx=0; xx<sqr_size; xx++){
+            for(int yy=0; yy<sqr_size; yy++){
+                setPixel(x * sqr_size + xx + px,
+                         y * sqr_size + yy + py,
+                         pal[k].r, pal[k].g, pal[k].b);
+            }
+        }
+    }
+}
+
+void czyscPalete(){
+    for(int k=0; k<ileKolorow8; k++){
+        paleta8[k] = {0, 0, 0};
+    }
+    ileKolorow8 = 0;
+    for(int k=0; k<256; k++){
+        paleta8s[k] = {0, 0, 0};
+        paleta8k[k] = {0, 0, 0};
+
+    }
+    for(int k=0; k<65; k++){
+        paleta6k[k] = {0, 0, 0};
+        paleta6s[k] = {0, 0, 0};
+    }
+}
+
+void narysujPalete3b(int px, int py, SDL_Color pal3b[]){
+    int x,y;
+    for(int k=0; k<8; k++){
+        y = k/32;
+        x = k%32;
+
+        for(int xx=0; xx<40; xx++){
+            for(int yy=0; yy<40; yy++){
+                setPixel(x*40+xx+px, y*40+yy+py, pal3b[k].r, pal3b[k].g, pal3b[k].b);
+            }
+        }
+
+    }
+}
+
+void narysujPalete_6bit_64odcienie_szarego(int px, int py, SDL_Color pal6b[]){
+    int x,y;
+    for(int k=0; k<64; k++){
+        y = k/8;
+        x = k%8;
+
+        for(int xx=0; xx<40; xx++){
+            for(int yy=0; yy<40; yy++){
+                setPixel(x*40+xx+px, y*40+yy+py, pal6b[k].r, pal6b[k].g, pal6b[k].b);
+            }
+        }
+
+    }
+}
+
 
 
 
