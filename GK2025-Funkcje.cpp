@@ -45,17 +45,25 @@ void Funkcja5() {
 void Funkcja6() {
     wyzerujTabliceBledow();
 
+    // w poniższej petli dla każdego pixela
+    // bierzemy wartość z obrazka (+ błędu)
+    // konwersja koloru na nasz format i na klasyczny z powrotem
+    // konwersja do osobnej zmiennej
+    // obliczanie błędu (+ propagacja)
+    // malowanie
+
     for(int y=0; y<wysokosc/2; y++){
         for(int x=0; x<szerokosc/2; x++){
-            // probkowanie pixelow
-            SDL_Color kolor = getPixel(x, y);
-            kolor = uzyskajKolorPoprawionyOBlod(kolor, x,y);
-            // zamiana probki na 6bit kolor
-            Uint8 kolor6bit = z24Kdo6K(kolor);
-            // odczytanie z 6k na malowalny pixel
+            // bierzemy kolor
+            SDL_Color orgKolor = getPixel(x, y);
+            orgKolor = uzyskajKolorPoprawionyOBlod(orgKolor, x,y);
+
+            // konwersja
+            Uint8 kolor6bit = z24Kdo6K(orgKolor);
             SDL_Color nowyKolor = z6Kdo24K(kolor6bit);
-            nowyKolor.r = nowyKolor.r;
-            obliczIPropagujBlad(kolor, nowyKolor, x, y);
+
+            // propagowanie i malowanie
+            obliczIPropagujBlad(orgKolor, nowyKolor, x, y);
             setPixel(x + szerokosc /2 , y, nowyKolor.r, nowyKolor.g, nowyKolor.b);
         }
     }
