@@ -2,6 +2,7 @@
 #include "GK2025-Funkcje.h"
 #include "GK2025-Zmienne.h"
 #include "GK2025-Paleta.h"
+#include "GK2025-Dithering.h"
 #include "GK2025-MedianCut.h"
 #include "GK2025-Pliki.h"
 
@@ -29,21 +30,43 @@ void Funkcja3() {
 
 void Funkcja4() {
 
-    //paletaNarzucona();
+    paletaNarzucona8();
 
     SDL_UpdateWindowSurface(window);
 }
 
 void Funkcja5() {
 
-    //paletaDedykowana();
+    paletaNarzucona6();
 
     SDL_UpdateWindowSurface(window);
 }
 
 void Funkcja6() {
+    wyzerujTabliceBledow();
 
-    paletaNarzucona6();
+    // w poniższej petli dla każdego pixela
+    // bierzemy wartość z obrazka (+ błędu)
+    // konwersja koloru na nasz format i na klasyczny z powrotem
+    // konwersja do osobnej zmiennej
+    // obliczanie błędu (+ propagacja)
+    // malowanie
+
+    for(int y=0; y<wysokosc/2; y++){
+        for(int x=0; x<szerokosc/2; x++){
+            // bierzemy kolor
+            SDL_Color orgKolor = getPixel(x, y);
+            orgKolor = uzyskajKolorPoprawionyOBlod(orgKolor, x,y);
+
+            // konwersja
+            Uint8 kolor6bit = z24Kdo6K(orgKolor);
+            SDL_Color nowyKolor = z6Kdo24K(kolor6bit);
+
+            // propagowanie i malowanie
+            obliczIPropagujBlad(orgKolor, nowyKolor, x, y);
+            setPixel(x + szerokosc /2 , y, nowyKolor.r, nowyKolor.g, nowyKolor.b);
+        }
+    }
 
     SDL_UpdateWindowSurface(window);
 }
@@ -260,4 +283,3 @@ void czyscEkran(Uint8 R, Uint8 G, Uint8 B)
     SDL_FillRect(screen, 0, SDL_MapRGB(screen->format, R, G, B));
     SDL_UpdateWindowSurface(window);
 }
-
