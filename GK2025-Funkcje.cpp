@@ -4,7 +4,7 @@
 #include "GK2025-Paleta.h"
 #include "GK2025-Dithering.h"
 #include "GK2025-MedianCut.h"
-#include "GK2025-Pliki.h"
+#include "GK2025-Zapis.hpp"
 
 
 void Funkcja1() {
@@ -50,7 +50,8 @@ void Funkcja6() {
 
 void Funkcja7() {
 
-    //...
+    zapiszPlik6();
+    odczytajPlik6();
 
     SDL_UpdateWindowSurface(window);
 }
