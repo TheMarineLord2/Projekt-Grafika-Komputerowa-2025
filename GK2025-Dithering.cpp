@@ -209,6 +209,7 @@ void floydSteinbergBasic(){
     }
 }
 
+
 void floydSteinbergMedianCutBW(){
     wyzerujTabliceBledowS();
 
@@ -220,10 +221,29 @@ void floydSteinbergMedianCutBW(){
             orgSzary = uzyskajKolorPoprawionyOBlodS(orgSzary, x,y);
 
             // konwersja
-            Uint8 kolor6bit = znajdzSasiadaBW_6bit_64odcienieSzarego(orgSzary);
-            SDL_Color nowyKolor = z6Sdo24K(kolor6bit);
+            int numerKoloru = znajdzSasiadaBW_6bit_64odcienieSzarego(orgSzary);
+            SDL_Color nowyKolor = paleta6s[numerKoloru];
             // propagowanie i malowanie
             obliczIPropagujBladS(orgSzary, nowyKolor.r, x, y);
+            setPixel(x + szerokosc /2 , y, nowyKolor.r, nowyKolor.g, nowyKolor.b);
+        }
+    }
+}
+
+void floydSteinbergMedianCutK(){
+    wyzerujTabliceBledowK();
+
+    for(int y=0; y<wysokosc/2; y++){
+        for(int x=0; x<szerokosc/2; x++){
+            // bierzemy kolor
+            SDL_Color orgKolor = getPixel(x, y);
+            orgKolor = uzyskajKolorPoprawionyOBlodK(orgKolor, x,y);
+
+            // konwersja
+            int numerKoloru = znajdzSasiada_6bit(orgKolor);
+            SDL_Color nowyKolor = paleta6k[numerKoloru];
+            // propagowanie i malowanie
+            obliczIPropagujBladK(orgKolor, nowyKolor, x, y);
             setPixel(x + szerokosc /2 , y, nowyKolor.r, nowyKolor.g, nowyKolor.b);
         }
     }

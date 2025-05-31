@@ -45,19 +45,21 @@ void Funkcja5() {
 void Funkcja6() {
 
 
+
     SDL_UpdateWindowSurface(window);
 }
 
 void Funkcja7() {
 
-    //...
+
 
     SDL_UpdateWindowSurface(window);
 }
 
 void Funkcja8() {
 
-    floydSteinbergMedianCutBW();
+    paletaMedianCut_6bit();
+    floydSteinbergMedianCutK();
 
     SDL_UpdateWindowSurface(window);
 }
@@ -65,6 +67,7 @@ void Funkcja8() {
 void Funkcja9() {
 
     paletaMedianCutBW_6bit();
+    floydSteinbergMedianCutBW();
 
     SDL_UpdateWindowSurface(window);
 }
