@@ -51,8 +51,8 @@ void Funkcja6() {
 
 void Funkcja7() {
 
-
     zapiszPlik6();
+    odczytajPlik6();
 
     SDL_UpdateWindowSurface(window);
 }
