@@ -10,4 +10,5 @@ extern SDL_Color uzyskajKolorPoprawionyOBlod(SDL_Color oryginalny, int x, int y)
 
 extern void floydSteinbergBasic();
 extern void floydSteinbergMedianCutBW();
+extern void floydSteinbergMedianCutK();
 #endif
