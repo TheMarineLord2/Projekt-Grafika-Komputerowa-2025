@@ -6,14 +6,7 @@
 
 using namespace std;
 
-<<<<<<< HEAD
-########### MEDIAN CUT -- SZARY ########
-=======
-<<<<<<< Updated upstream
-=======
 //########### MEDIAN CUT -- SZARY ########
->>>>>>> Stashed changes
->>>>>>> MedianCutInFloydSteinberg-27.05
 
 void paletaMedianCutBW(){
     ileKubelkow = 0;
@@ -189,12 +182,6 @@ int znajdzSasiadaBW_6bit_64odcienieSzarego(Uint8 wartosc){
     return indexMinimum;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> MedianCutInFloydSteinberg-27.05
-
 void MedianCutBW_6bit(int start, int koniec, int iteracja){
 
     if(iteracja > 0){
@@ -231,12 +218,7 @@ void MedianCutBW_6bit(int start, int koniec, int iteracja){
 
 }
 
-<<<<<<< HEAD
-########### MEDIAN CUT -- KOLORY ########
-=======
 //########### MEDIAN CUT -- KOLORY ########
->>>>>>> MedianCutInFloydSteinberg-27.05
-
 
 void MedianCut(int start, int koniec, int iteracja){
     for(int i=0; i<iteracja; i++) cout << "  ";
@@ -399,14 +381,11 @@ int znajdzSasiada(SDL_Color kolor){
     return indexMinimum;
 }
 
-<<<<<<< HEAD
-### MedianCut dla wersji 6-bitowej -> 64 kolory ###
-=======
 //### MedianCut dla wersji 6-bitowej -> 64 kolory ###
->>>>>>> MedianCutInFloydSteinberg-27.05
+
 void paletaMedianCut_6bit(){
     ileKubelkow = 0;
-    ileKolorow8 = 0;
+    ileKolorow6 = 0;
     czyscPalete();
     SDL_Color kolor;
     int numer = 0;
@@ -510,7 +489,3 @@ void MedianCut_6bit(int start, int koniec, int iteracja){
         ileKubelkow++;
     }
 }
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> MedianCutInFloydSteinberg-27.05
