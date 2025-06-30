@@ -471,7 +471,32 @@ void narysujPalete_6bit_64odcienie_szarego(int px, int py, SDL_Color pal6b[]){
     }
 }
 
+SDL_Color getUint8AndMakeItGrey(Uint8 S){
+    return Z6Sdo24K(S);
+}
 
+SDL_Color getUint8AndMakeItGay(Uint8 K){
+    return z6Kdo24K(K);
+}
 
+SDL_Color getColorFromDedicatedPalete(Uint8 cNumber){
+    return paleta6[cNumber];
+}
 
+void print6bitSfromTable(Uint8 *picture){
+    for(int x = 0; x<szerokosc/2 ; x++){
+        for(int y = 0; y<wysokosc/2 ; y++){
+            SDL_Color drawable = getUint8AndMakeItGrey,(picture[x+y*(wysokosc/2)]);
+            setPixel(x,y,drawable.r, drawable.g, drawable.b);
+        }
+    }
+}
 
+void print6bitKfromTable(Uint8 *picture){
+    for(int x = 0; x<szerokosc/2 ; x++){
+        for(int y = 0; y<wysokosc/2 ; y++){
+            SDL_Color drawable = getUint8AndMakeItGay(picture[x+y*(wysokosc/2)]);
+            setPixel(x,y,drawable.r, drawable.g, drawable.b);
+        }
+    }
+}
